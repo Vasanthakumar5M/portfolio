@@ -8,9 +8,9 @@ export const NAV_LINKS = [
 ]
 
 export const SKILLS = {
-  Languages: { iconName: 'Code2', items: ['Java', 'MySQL', 'PostgreSQL'] },
-  Frameworks: { iconName: 'Braces', items: ['Spring Boot', 'Hibernate', 'React', 'Tailwind CSS'] },
-  'Tools & Platforms': { iconName: 'Cloud', items: ['Maven', 'Git', 'Railway', 'Docker', 'Kubernetes', 'Jenkins', 'Keycloak', 'Kafka', 'Redis', 'AWS'] },
+  Languages: { iconName: 'Code2', items: ['Java', 'HTML', 'CSS', 'MySQL', 'PostgreSQL'] },
+  Frameworks: { iconName: 'Braces', items: ['Spring Boot', 'Hibernate', 'React', 'Redux', 'Tailwind CSS'] },
+  'Tools & Platforms': { iconName: 'Cloud', items: ['Maven', 'Git', 'GitHub', 'Docker', 'Kubernetes', 'Jenkins', 'Keycloak', 'Kafka', 'Redis', 'AWS'] },
   'Core Concepts': { iconName: 'Brain', items: ['OOP', 'DSA', 'RESTful APIs', 'JWT Authentication'] },
 }
 
@@ -54,7 +54,7 @@ export const PROJECTS = [
       'Integrated Apache Kafka for event-driven communication between HR modules and other internal services.',
       'Utilizing Docker, Kubernetes, and Jenkins for containerization and CI/CD pipeline management.',
     ],
-    tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Kafka', 'Maven', 'Docker', 'Kubernetes', 'Jenkins', 'Git'],
+    tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Kafka', 'Maven', 'Docker', 'Kubernetes', 'Jenkins', 'Keycloak', 'Git'],
   },
   {
     name: 'CRM Application',
@@ -81,7 +81,7 @@ export const PROJECTS = [
       'Built RESTful backend APIs using Spring Boot to handle product listings, user interactions, and data management.',
       'Developed a dedicated Product Admin Panel enabling admins to upload, manage, and organize products efficiently.',
       'Implemented Redis caching to optimize product data retrieval and improve overall application performance.',
-      'Containerized and deployed the application using Docker and Kubernetes, with CI/CD pipelines via Jenkins.',
+      'Deployed and hosted the application on AWS, managing cloud infrastructure and configurations.',
     ],
     tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Redis', 'Maven', 'Docker', 'Kubernetes', 'Jenkins', 'Git'],
   },
