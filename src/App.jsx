@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Layout
 import { Navbar } from './components/Navbar/Navbar'
@@ -17,12 +17,27 @@ import { Contact } from './components/Contact/Contact'
 import './index.css'
 
 function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark'
+  })
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark')
+
   return (
     <>
       <div className="crt-overlay" />
       
-      <div className="min-h-screen bg-cyber-bg text-cyber-text selection:bg-cyber-magenta selection:text-white relative z-10">
-        <Navbar />
+      <div className="min-h-screen relative z-10 transition-colors duration-300">
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
         
         <main>
           <Hero />
@@ -42,7 +57,7 @@ function App() {
           <div className="h-px bg-gradient-to-r from-transparent via-cyber-magenta/50 to-transparent w-full" />
           <Education />
           
-          <div className="h-px bg-gradient-to-r from-transparent via-[#333] to-transparent w-full" />
+          <div className="h-px bg-gradient-to-r from-transparent via-cyber-border-dark to-transparent w-full" />
           <Contact />
         </main>
 
