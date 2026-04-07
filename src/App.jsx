@@ -18,21 +18,37 @@ import './index.css'
 
 function App() {
   return (
-    <div className="min-h-screen bg-editorial-bg text-editorial-text selection:bg-editorial-accent selection:text-white">
-      <Navbar />
+    <>
+      <div className="crt-overlay" />
       
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Education />
-        <Contact />
-      </main>
+      <div className="min-h-screen bg-cyber-bg text-cyber-text selection:bg-cyber-magenta selection:text-white relative z-10">
+        <Navbar />
+        
+        <main>
+          <Hero />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-cyber-cyan/50 to-transparent w-full" />
+          <About />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-cyber-yellow/50 to-transparent w-full" />
+          <Skills />
 
-      <Footer />
-    </div>
+          <div className="h-px bg-gradient-to-r from-transparent via-cyber-yellow/50 to-transparent w-full" />
+          <Experience />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-cyber-cyan/50 to-transparent w-full" />
+          <Projects />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-cyber-magenta/50 to-transparent w-full" />
+          <Education />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-[#333] to-transparent w-full" />
+          <Contact />
+        </main>
+
+        <Footer />
+      </div>
+    </>
   )
 }
 
