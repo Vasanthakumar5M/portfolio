@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { ArrowUp } from 'lucide-react'
+import React from 'react'
 
 // Layout
 import { Navbar } from './components/Navbar/Navbar'
@@ -17,39 +16,22 @@ import { Contact } from './components/Contact/Contact'
 // Global styles
 import './index.css'
 
-function ScrollToTop() {
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    const toggle = () => setVisible(window.scrollY > 500)
-    window.addEventListener('scroll', toggle)
-    return () => window.removeEventListener('scroll', toggle)
-  }, [])
-
-  return (
-    <button
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className={`fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white flex items-center justify-center shadow-2xl hover:bg-white hover:text-black transition-all duration-300
-        ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
-      aria-label="Scroll to top"
-    >
-      <ArrowUp size={20} />
-    </button>
-  )
-}
-
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white font-sans antialiased selection:bg-neon-purple/30">
+    <div className="min-h-screen bg-editorial-bg text-editorial-text selection:bg-editorial-accent selection:text-white">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Contact />
+      
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
+
       <Footer />
-      <ScrollToTop />
     </div>
   )
 }

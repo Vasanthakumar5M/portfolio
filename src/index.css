@@ -1,70 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
-  /* Neon / Bento adjustments */
-  --color-bento-card: rgba(24, 24, 27, 0.4);
-  --color-bento-border: rgba(63, 63, 70, 0.5);
-  
-  --color-neon-purple: #c084fc;
-  --color-neon-cyan: #22d3ee;
-  --color-neon-pink: #f472b6;
+  /* Editorial Colors */
+  --color-editorial-bg: #F7F7F5;
+  --color-editorial-text: #111111;
+  --color-editorial-accent: #FF4500; /* Electric Orange */
+  --color-editorial-muted: #767676;
+  --color-editorial-border: #111111;
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-editorial-bg);
+  color: var(--color-editorial-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes slide-up {
+/* Animations */
+@keyframes slide-up-fade {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes mesh-gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@utility animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
 @utility animate-slide-up {
-  animation: slide-up 0.8s ease-out forwards;
+  animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@utility animate-fade-in {
-  animation: fade-in 1s ease-out forwards;
+/* Custom Selection */
+::selection {
+  background: var(--color-editorial-accent);
+  color: white;
 }
 
-@utility animate-mesh {
-  background-size: 200% 200%;
-  animation: mesh-gradient 8s ease infinite;
-}
-
+/* Clean Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-neon-purple) #18181b;
+  scrollbar-color: var(--color-editorial-border) transparent;
 }
-
-/* Glassmorphism utils */
-@utility glass-card {
-  background: var(--color-bento-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--color-bento-border);
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-editorial-border);
 }

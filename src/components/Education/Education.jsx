@@ -1,36 +1,29 @@
-import { GraduationCap, Calendar } from 'lucide-react'
-import { SectionWrapper } from '../ui/SectionWrapper'
 import { SectionTitle } from '../ui/SectionTitle'
-import { BentoCard } from '../ui/BentoCard'
 import { EDUCATION } from '../../config/resumeData'
 
 export function Education() {
   return (
-    <SectionWrapper id="education">
-      <div className="max-w-4xl mx-auto">
-        <SectionTitle icon={<GraduationCap size={16} />} title="Education" subtitle="Academic background" />
-        
-        <div className="grid sm:grid-cols-2 gap-6">
-          {EDUCATION.map((edu, idx) => (
-             <BentoCard key={idx} className="p-8" delay={idx * 150}>
-               <div className="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white mb-6">
-                 <GraduationCap size={20} />
-               </div>
-               <h3 className="text-xl font-bold text-white mb-2">{edu.degree}</h3>
-               <p className="text-zinc-400 text-sm mb-6 leading-relaxed">{edu.institution}</p>
-               
-               <div className="flex flex-col gap-3 pt-6 border-t border-white/5">
-                 <div className="flex items-center gap-2 text-sm text-zinc-500">
-                   <Calendar size={14} /> {edu.duration}
-                 </div>
-                 <div className="inline-block bg-white/10 text-white w-max px-3 py-1 rounded-lg text-sm font-medium">
-                   {edu.score}
-                 </div>
-               </div>
-             </BentoCard>
-          ))}
-        </div>
+    <section id="education" className="py-24 px-4 sm:px-6 lg:px-12">
+      <SectionTitle title="Education" subtitle="Academic background and qualifications." number="05" />
+      
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        {EDUCATION.map((edu, idx) => (
+          <div key={idx} className="border border-editorial-border p-8 md:p-12">
+             <div className="text-sm font-bold uppercase tracking-widest text-editorial-muted mb-6">
+               {edu.duration}
+             </div>
+             <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-4 leading-tight">
+               {edu.degree}
+             </h3>
+             <p className="font-serif text-lg text-editorial-muted mb-8">
+               {edu.institution}
+             </p>
+             <div className="inline-block bg-editorial-text text-editorial-bg px-4 py-2 font-bold uppercase tracking-widest text-sm">
+               {edu.score}
+             </div>
+          </div>
+        ))}
       </div>
-    </SectionWrapper>
+    </section>
   )
 }

@@ -1,22 +1,13 @@
-import { Mail } from 'lucide-react'
-import { GithubIcon } from '../ui/GithubIcon'
-
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-zinc-950/80 py-8 mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-zinc-500 text-sm">
-          © {new Date().getFullYear()} <span className="text-zinc-300">Vasanthakumar M</span>. 
-          Built with React & Tailwind CSS.
+    <footer className="border-t border-editorial-border py-8 px-4 sm:px-6 lg:px-12 bg-editorial-bg text-editorial-text">
+      <div className="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-bold uppercase tracking-widest">
+        <p>
+          © {new Date().getFullYear()} Vasanthakumar M
         </p>
-        <div className="flex items-center gap-4">
-          <a href="https://github.com/Vasanthakumar5M" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors">
-            <GithubIcon size={18} />
-          </a>
-          <a href="mailto:mvasanthakumar381@gmail.com" className="text-zinc-500 hover:text-white transition-colors">
-            <Mail size={18} />
-          </a>
-        </div>
+        <p className="text-editorial-muted font-serif normal-case font-normal">
+          Designed with React & Tailwind CSS.
+        </p>
       </div>
     </footer>
   )
