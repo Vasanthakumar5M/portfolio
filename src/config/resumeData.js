@@ -11,7 +11,7 @@ export const SKILLS = {
   Languages: { iconName: 'Code2', items: ['Java', 'HTML', 'CSS', 'MySQL', 'PostgreSQL'] },
   Frameworks: { iconName: 'Braces', items: ['Spring Boot', 'Hibernate', 'React', 'Redux', 'Tailwind CSS'] },
   'Tools & Platforms': { iconName: 'Cloud', items: ['Maven', 'Git', 'GitHub', 'Docker', 'Kubernetes', 'Jenkins', 'Keycloak', 'Kafka', 'Redis', 'AWS'] },
-  'Core Concepts': { iconName: 'Brain', items: ['OOP', 'DSA', 'RESTful APIs', 'JWT Authentication'] },
+  'Core Concepts': { iconName: 'Brain', items: ['OOP', 'DSA', 'RESTful APIs', 'JWT Authentication', 'Microservices', 'MVC'] },
 }
 
 export const EXPERIENCE = [
@@ -21,10 +21,10 @@ export const EXPERIENCE = [
     duration: 'Oct 2025 – Present',
     current: true,
     points: [
-      'Develop and maintain full-stack web applications using React (frontend) and Spring Boot (backend).',
-      'Design and build RESTful APIs consumed by React-based frontends for seamless client-server communication.',
-      'Manage and optimize PostgreSQL database schemas and queries to support application features.',
-      'Collaborate on end-to-end feature development, from UI components to backend business logic.',
+      'Engineered and maintained RESTful APIs using Spring Boot, serving React-based frontends with reliable client-server communication.',
+      'Designed and optimized PostgreSQL database schemas, improving query performance for core application features.',
+      'Built and containerized backend services using Docker, ensuring consistent environments across dev and production.',
+      'Contributed to frontend development with React, supporting end-to-end feature delivery across the full stack.',
     ],
   },
   {
@@ -33,9 +33,9 @@ export const EXPERIENCE = [
     duration: 'Jul 2025 – Sep 2025',
     current: false,
     points: [
-      'Contributed to frontend and backend development tasks during a 3-month internship program.',
-      'Gained hands-on experience with React, Spring Boot, and MySQL in a production team environment.',
-      'Assisted in API development and database management under senior developer guidance.',
+      'Developed and tested RESTful API endpoints using Spring Boot during a 3-month internship in a production team environment.',
+      'Worked with PostgreSQL to write and optimize queries supporting core application features.',
+      'Built React components and integrated them with backend APIs, contributing to live feature delivery.',
     ],
   },
 ]
@@ -47,12 +47,9 @@ export const PROJECTS = [
     company: 'TechSmew Innovations Pvt Ltd',
     duration: '2025 – Present',
     description: [
-      'Actively developing a Human Resource Management system to automate and streamline core HR operations.',
-      'Building modules for employee management, including onboarding, profiles, and department tracking.',
-      'Implementing payroll and attendance management with automated calculation and reporting features.',
-      'Developing a leave management module to handle leave requests, approvals, and balance tracking.',
-      'Integrated Apache Kafka for event-driven communication between HR modules and other internal services.',
-      'Utilizing Docker, Kubernetes, and Jenkins for containerization and CI/CD pipeline management.',
+      'Architecting backend services with Spring Boot to automate core HR operations including payroll and attendance.',
+      'Designed PostgreSQL schemas for employee management — onboarding, profiles, department tracking, and reporting.',
+      'Integrated automated payroll calculation logic with real-time attendance data processing.',
     ],
     tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Kafka', 'Maven', 'Docker', 'Kubernetes', 'Jenkins', 'Keycloak', 'Git'],
   },
@@ -62,22 +59,19 @@ export const PROJECTS = [
     company: 'TechSmew Innovations Pvt Ltd',
     duration: '2025 – Present',
     description: [
-      'Building an enterprise CRM application to streamline customer relationship and sales management.',
-      'Developing frontend dashboards and UI components using React for managing customer data and workflows.',
-      'Designing and implementing Spring Boot backend APIs for CRM operations including CRUD, filtering, and reporting.',
-      'Structuring PostgreSQL database schemas to support scalable CRM data models.',
-      'Integrated Apache Kafka for event-driven messaging and asynchronous communication between services.',
-      'Integrated Keycloak for identity and access management, handling authentication and role-based authorization.',
+      'Designed and implemented Spring Boot REST APIs for CRM operations — CRUD, filtering, search, and reporting.',
+      'Built PostgreSQL data models to support customer relationship tracking and sales pipeline management.',
+      'Developed React-based dashboards consuming backend APIs for customer data visualization and workflow management.',
     ],
     tech: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Kafka', 'Maven', 'Docker', 'Kubernetes', 'Jenkins', 'Keycloak', 'Git'],
   },
   {
-    name: 'E-Commerce Jewellery Platform',
+    name: 'Jewellery Platform',
     type: 'Company',
     company: 'TechSmew Innovations Pvt Ltd',
     duration: '2025',
     description: [
-      'Designed and developed a full-stack e-commerce platform with a modern, responsive UI using React.',
+      'Designed and developed a full-stack Jewellery platform with a modern, responsive UI using React.',
       'Built RESTful backend APIs using Spring Boot to handle product listings, user interactions, and data management.',
       'Developed a dedicated Product Admin Panel enabling admins to upload, manage, and organize products efficiently.',
       'Implemented Redis caching to optimize product data retrieval and improve overall application performance.',

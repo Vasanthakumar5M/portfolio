@@ -25,17 +25,17 @@ export function Navbar({ theme, toggleTheme }) {
       <div className="px-4 py-2 border-b border-cyber-border-dark flex justify-between items-center bg-cyber-darker">
         <div className="text-[10px] font-mono text-cyber-yellow">NET_STATUS: ONLINE</div>
         <div className="flex items-center gap-4">
-           <button onClick={toggleTheme} className="text-cyber-cyan hover:text-cyber-magenta transition-colors" aria-label="Toggle Theme">
-              {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
-           </button>
-           <div className="text-[10px] font-mono text-cyber-dim">sys.time: {new Date().toLocaleTimeString()}</div>
+          <button onClick={toggleTheme} className="text-cyber-cyan hover:text-cyber-magenta transition-colors" aria-label="Toggle Theme">
+            {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
+          </button>
+          <div className="text-[10px] font-mono text-cyber-dim">sys.time: {new Date().toLocaleTimeString()}</div>
         </div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between py-3 gap-4 overflow-x-auto scrollbar-none">
-        
+
         <a href="#hero" className="font-black text-2xl tracking-widest text-cyber-text shrink-0">
-          V_KUMAR
+          VASANTH_M
           <span className="text-[10px] ml-1 text-cyber-magenta opacity-80">SYS_ADMIN</span>
         </a>
 

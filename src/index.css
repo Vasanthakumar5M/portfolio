@@ -164,6 +164,16 @@ p, li, span, div { text-transform: none; }
   animation: cyber-slide-up 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
+@keyframes cyber-float {
+  0% { transform: translateY(0px); filter: drop-shadow(0 0 10px var(--glow-cyan-in)); }
+  50% { transform: translateY(-10px); filter: drop-shadow(0 0 20px var(--glow-magenta-in)); }
+  100% { transform: translateY(0px); filter: drop-shadow(0 0 10px var(--glow-cyan-in)); }
+}
+
+@utility animate-cyber-float {
+  animation: cyber-float 4s ease-in-out infinite;
+}
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track {
   background: var(--theme-bg);

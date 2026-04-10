@@ -23,7 +23,10 @@ export function Hero() {
                      FULL-STACK DEV {`[ENG_L1]`}
                   </h2>
                   <p className="text-cyber-muted text-sm md:text-base leading-relaxed max-w-md font-mono">
-                     Building scalable web applications, enterprise RESTful APIs, and neural-net compliant systems at TechSmew Innovations.
+                     Building production-grade systems with React and
+                     Spring Boot. From RESTful API design to Dockerized
+                     deployments — writing code that performs under pressure
+                     and scales without breaking a sweat.
                   </p>
                </div>
 
